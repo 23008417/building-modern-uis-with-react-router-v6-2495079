@@ -10,14 +10,7 @@ export default function Categories() {
       <ul className="categories">
         {categories.map(cat => (
           <li key={cat.id}>
-            <NavLink
-              className={({ isActive }) =>
-                isActive ? "category-active" : null
-              }
-              to={cat.id}
-            >
-              {cat.name}
-            </NavLink>
+            <NavLink to={cat.id}>{cat.name}</NavLink>
           </li>
         ))}
       </ul>
